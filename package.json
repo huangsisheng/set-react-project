@@ -2,9 +2,11 @@
   "name": "set-react-project",
   "version": "0.0.1",
   "description": "This is a scaffold to create simple react project. And support using webpack5 or vite3",
-  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "./tasks/publish.sh"
   },
   "keywords": [
     "React-CLI",
