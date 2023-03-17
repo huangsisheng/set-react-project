@@ -1,18 +1,37 @@
 {
+  "private": true,
   "name": "set-react-project",
   "version": "0.0.1",
-  "description": "This is a scaffold to create simple react project. And support using webpack5 or vite3",
+  "description": "This is a scaffold to create simple react project. And support using webpack or vite",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "publish": "./tasks/publish.sh"
+    "publish": "./tasks/publish.sh",
+    "eslint": "eslint .",
+    "prettier": "prettier ."
   },
   "keywords": [
-    "React-CLI",
-    "webpack5",
-    "vite3"
+    "react",
+    "webpack",
+    "vite"
   ],
   "author": "huangsisheng",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,yml,yaml,css,scss,ts,tsx,md}": [
+      "prettier --write"
+    ]
+  }
 }
