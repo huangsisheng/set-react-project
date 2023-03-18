@@ -1,0 +1,32 @@
+{
+  "name": "set-react-project",
+  "version": "0.0.1",
+  "description": "How to set a offical project for react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangsisheng/set-react-project.git",
+    "directory": "packages/set-react-project"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "offical"
+  ],
+  "author": "huangsisheng",
+  "license": "ISC",
+  "bin": {
+    "set-react-project": "./bin/srp.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "figlet": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "prettier": "^2.8.4",
+    "typescript": "^5.0.2"
+  }
+}

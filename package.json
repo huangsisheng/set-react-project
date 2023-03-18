@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "set-react-project",
   "version": "0.0.1",
   "description": "This is a scaffold to create simple react project. And support using webpack or vite",
