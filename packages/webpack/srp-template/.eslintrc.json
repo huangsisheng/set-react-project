@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extraFileExtensions": [".json", ".html", ".scss"]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "react-hooks", "babel", "promise", "import"],
+  "rules": {
+    "import/extensions": "off",
+    "strict": ["error", "global"],
+    "curly": "warn",
+    "no-console": "off",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "no-case-declarations": "off",
+    "no-unneeded-ternary": "off",
+    "no-unused-expressions": "off",
+    "spaced-comment": "off",
+    "func-names": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-no-bind": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": "off"
+  },
+  "overrides": []
+}

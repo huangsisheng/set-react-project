@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dlls/
+bin/
+build/
+src/index.html
+
