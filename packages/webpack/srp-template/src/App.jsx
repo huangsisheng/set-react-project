@@ -1,7 +1,8 @@
 import * as React from "react";
 
+import "./App.css";
+
 const App = () => {
-  return <div></div>;
+  return <div className="app-container">SRP</div>;
 };
-const a = 1;
 export default App;

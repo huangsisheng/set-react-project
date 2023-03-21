@@ -2,7 +2,7 @@
 
 ## Project preparation
 
-### Add dev.server.config.js:
+### Add dev_proxy.js:
 
 ```js
 /* 
