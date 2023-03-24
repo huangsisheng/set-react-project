@@ -1,0 +1,143 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--baground-color);
+  text-align: center;
+}
+@keyframes logo {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.github {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.app-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 96px;
+  height: 96px;
+  animation: logo linear infinite 5s;
+}
+
+.app-title {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--debault-color)
+    )
+    no-repeat right bottom;
+  background-size: 0 2px;
+  transition: background-size linear 0.5s;
+}
+.app-title:hover {
+  background-size: 100% 2px;
+  background-position-x: left;
+}
+.app-title > a {
+  color: var(--white-color);
+}
+
+.app-link {
+  display: inline-block;
+  color: var(--help-color);
+  text-decoration: none;
+}
+
+.app-link + .app-link {
+  margin-left: 40px;
+}
+.app-link:first-child::after {
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  top: 2px;
+  width: 2px;
+  height: 12px;
+  content: " ";
+  background: var(--border-color);
+}
+.app-link.active,
+.app-link:hover {
+  opacity: 0.8;
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.app-refers {
+  margin-top: 20px;
+}
+.app-refer {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white-color);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.app-refer:first-child {
+  margin-right: 10px;
+  background: linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--debault-color)
+    )
+    no-repeat;
+  color: var(--text-color);
+}
+.app-refer:last-child {
+  background: transparent;
+  border: 2px solid var(--debault-color);
+  color: var(--debault-color);
+}
+.app-refer:last-child:hover {
+  border-color: var(--white-color);
+  background-color: var(--white-color);
+  color: rgba(0, 0, 0, 0.9);
+
+  border-color: hsla(0, 0%, 100%, 0.6);
+  transition: color 200ms ease, background-color 200ms ease,
+    border-color 200ms ease;
+}
+
+.page-container {
+  margin-top: 20px;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 500ms, transform 500ms;
+}

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #fff;
+  --help-color: hsla(0, 0%, 100%, 0.6);
+  --text-color: #333;
+  --primary-color: #01a4ff;
+  --debault-color: #01ffc2;
+  --link-color: var(--debault-color);
+  --link-active-color: var(--primary-color);
+  --baground-color: #180030;
+  --border-color: hsla(0, 0%, 100%, 0.3);
+}
+html {
+  color: var(--white-color);
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}

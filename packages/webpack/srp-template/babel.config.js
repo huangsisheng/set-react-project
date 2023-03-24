@@ -1,4 +1,8 @@
 module.exports = {
+  plugins: [
+    // https://github.com/babel/babel/issues/8562
+    require.resolve("@babel/plugin-transform-runtime"),
+  ],
   // 执行顺序由右往左,所以先处理ts,再处理jsx,最后再试一下babel转换为低版本语法
   presets: [
     [

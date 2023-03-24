@@ -11,15 +11,17 @@ const dev_config = {
   devServer: {
     hot: true,
     open: true,
+    historyApiFallback: true,
     ...dev_proxy,
   },
-  module: {},
   plugins: [
     new HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
     new HTMLWebpackPlugin({
+      filename: "index.html",
       title: "srp webpack template",
-      template: _join("src/index.html"),
+      template: _join("src/public/index.html"),
+      favicon: _join("src/public/favicon.ico"),
     }),
   ],
 };

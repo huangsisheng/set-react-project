@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --config build/webpack.config.js",
-    "build": "cross-env NODE_ENV=prod webpack --config build/webpack.config.js",
-    "build:analyze": "cross-env NODE_ENV=prod analyze=true webpack --config build/webpack.config.js ",
+    "dev": "cross-env webpack-dev-server --config build/webpack.config.js",
+    "build": "cross-env webpack --config build/webpack.config.js",
+    "build:analyze": "cross-env analyze=true webpack --config build/webpack.config.js ",
     "deploy:testing": "npm run build && sh bin/deployment.sh testing",
     "eslint": "eslint --max-warnings=0",
     "prettier": "prettier .",
@@ -17,8 +17,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@babel/runtime": "^7.21.0",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
@@ -55,10 +58,13 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "core-js": "^3.29.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.9.0",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "react-transition-group": "^4.4.5"
   },
   "husky": {
     "hooks": {

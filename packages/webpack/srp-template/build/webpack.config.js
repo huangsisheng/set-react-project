@@ -4,13 +4,14 @@ const base_config = require("./webpack.base");
 const dev_config = require("./webpack.dev");
 const prod_config = require("./webpack.prod");
 
-const ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
+
 module.exports = function () {
-  switch (ENV) {
-    case "dev":
+  switch (NODE_ENV) {
+    case "development":
     default:
       return merge(base_config, dev_config);
-    case "prod":
+    case "production":
       return merge(base_config, prod_config);
   }
 };

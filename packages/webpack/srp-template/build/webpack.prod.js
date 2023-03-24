@@ -10,7 +10,8 @@ const prod_config = {
   plugins: [
     new HTMLWebpackPlugin({
       title: "srp webpack template",
-      template: _join("src/index.html"),
+      template: _join("src/public/index.html"),
+      favicon: _join("src/public/favicon.ico"),
       filename: "index.html",
       minify: {
         // 压缩HTML文件
